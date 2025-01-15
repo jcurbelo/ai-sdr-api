@@ -1,14 +1,22 @@
 export const changelog = {
   "entries": [
     {
-      "date": "2025-01-09",
-      "title": "January 09, 2025",
-      "description": "Aptos Soulbound NFTs",
-      "content": "Introduced support for soulbound NFTs on the Aptos blockchain, enabling non-transferable token creation.",
+      "date": "2025-01-07",
+      "title": "January 07, 2025",
+      "description": "Scroll Chain Mainnet Launch",
+      "content": "Launched full mainnet support for Scroll chain, enabling NFT minting and collection management with proven transaction capability on the Scroll network.",
       "sections": [
         {
           "title": "Overview",
-          "content": "We've added the ability to create soulbound NFTs on the Aptos blockchain. Soulbound NFTs are non-transferable tokens that remain permanently linked to their original owner's wallet, making them perfect for credentials, memberships, or achievements that shouldn't be transferred. This implementation includes a secure secondary dummy signer system to ensure the immutability of these tokens."
+          "content": "We're thrilled to announce the successful launch of Scroll chain support on mainnet. This integration expands our multi-chain capabilities, allowing users to create collections and mint NFTs directly on the Scroll network."
+        },
+        {
+          "title": "Features",
+          "content": "The Scroll mainnet integration includes:\n* Full support for collection creation and NFT minting\n* Complete integration with our existing infrastructure\n* Verified transaction capabilities on the Scroll network\n* Seamless compatibility with our standard APIs"
+        },
+        {
+          "title": "Implementation",
+          "content": "This addition represents another step in our commitment to supporting emerging blockchain networks while maintaining our platform's reliability and user experience. The integration has been thoroughly tested with successful minting and collection creation transactions confirmed on the Scroll mainnet."
         }
       ]
     },
