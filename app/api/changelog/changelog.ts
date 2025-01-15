@@ -1,6 +1,18 @@
 export const changelog = {
   "entries": [
     {
+      "date": "2025-01-09",
+      "title": "January 09, 2025",
+      "description": "Aptos Soulbound NFTs",
+      "content": "Introduced support for soulbound NFTs on the Aptos blockchain, enabling non-transferable token creation.",
+      "sections": [
+        {
+          "title": "Overview",
+          "content": "We've added the ability to create soulbound NFTs on the Aptos blockchain. Soulbound NFTs are non-transferable tokens that remain permanently linked to their original owner's wallet, making them perfect for credentials, memberships, or achievements that shouldn't be transferred. This implementation includes a secure secondary dummy signer system to ensure the immutability of these tokens."
+        }
+      ]
+    },
+    {
       "date": "2024-09-16",
       "title": "Sep 16, 2024",
       "description": "Send email delivery notifications to NFT recipients",
