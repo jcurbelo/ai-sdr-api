@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Changelog API",
+    "version": "1.0.0",
+    "description": "API for retrieving application changelog information"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/api/changelog": {
+      "get": {
+        "summary": "Get changelog information",
+        "description": "Retrieves the current version and list of changes",
+        "operationId": "getChangelog",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string",
+                      "example": "1.0.0"
+                    },
+                    "lastUpdated": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-01-15T12:00:00Z"
+                    },
+                    "changes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": "string",
+                            "format": "date",
+                            "example": "2024-01-15"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": ["feature", "fix", "improvement"],
+                            "example": "feature"
+                          },
+                          "description": {
+                            "type": "string",
+                            "example": "Initial API release"
+                          }
+                        },
+                        "required": ["date", "type", "description"]
+                      }
+                    }
+                  },
+                  "required": ["version", "lastUpdated", "changes"]
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "CORS preflight",
+        "description": "Handles CORS preflight requests",
+        "operationId": "changelogOptions",
+        "responses": {
+          "204": {
+            "description": "CORS preflight response"
+          }
+        }
+      }
+    }
+  }
+} 
